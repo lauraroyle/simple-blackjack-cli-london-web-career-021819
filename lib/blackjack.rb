@@ -28,12 +28,26 @@ def initial_round
   return card_total
 end
 
-def hit?
+def hit?(card_total)
+  # code hit? here
+  prompt_user
+  player_input = get_user_input
+  if player_input == "h"
+    return deal_card
+  elsif player_input == "s"
+    puts "You stay at #{card_total}"
+    exit
+  else
+    invalid_command
+    return nil
+  end
 end
 
 def invalid_command
   # code invalid_command here
+  puts "Sorry, that input is invalid."
 end
+
 
 #####################################################
 # get every test to pass before coding runner below #
