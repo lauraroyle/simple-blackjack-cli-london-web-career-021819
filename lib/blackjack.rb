@@ -35,6 +35,7 @@ def hit?(card_total)
     return deal_card
   elsif player_input == "s"
     "You stay at #{card_total}"
+    exit
   else
     invalid_command
     return nil
