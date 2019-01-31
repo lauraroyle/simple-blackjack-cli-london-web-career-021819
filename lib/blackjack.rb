@@ -29,13 +29,12 @@ def initial_round
 end
 
 def hit?(card_total)
-  # code hit? here
   prompt_user
   player_input = get_user_input
   if player_input == "h"
     return deal_card
   elsif player_input == "s"
-    puts "You stay at #{card_total}"
+    "You stay at #{card_total}"
     exit
   else
     invalid_command
