@@ -43,7 +43,6 @@ def hit?(card_total)
 end
 
 def invalid_command
-  # code invalid_command here
   puts "Sorry, that input is invalid."
 end
 
@@ -52,6 +51,18 @@ end
 # get every test to pass before coding runner below #
 #####################################################
 
+
 def runner
+  welcome
+  card_total = initial_round
+  until card_total > 21
+    display_card_total(card_total)
+    new_card = hit?(card_total)
+    unless new_card == nil
+      card_total += new_card
+    end
+
+  end
+  end_game(card_total)
   # code runner here
 end
