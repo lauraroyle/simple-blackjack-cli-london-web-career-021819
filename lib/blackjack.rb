@@ -29,7 +29,6 @@ def initial_round
 end
 
 def hit?
-  get_user_input
 end
 
 def invalid_command
